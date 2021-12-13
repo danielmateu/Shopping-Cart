@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My new Store</title>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-<!--NAVBAR-->
+    <!--NAVBAR-->
     <nav class="navbar">
         <div class="navbar-center">
             <span class="nav-icon">
-            <i class="fas fa-bars"></i> 
+                <i class="fas fa-bars"></i>
             </span>
-            <img src="./images/logo.svg" alt="store logo">
+            <img src="./images/logo.svg" alt="store logo" />
             <div class="cart-btn">
                 <span class="nav-icon">
                     <i class="fas fa-cart-plus"></i>
@@ -26,85 +29,60 @@
                 <div class="cart-items">0</div>
             </div>
         </div>
-
     </nav>
-<!--END - NAVBAR-->
+    <!--END - NAVBAR-->
 
-<!-- Hero -->
+    <!-- Hero -->
     <header class="hero">
         <div class="banner">
             <h1 class="banner-title">furniture collection</h1>
             <button class="banner-btn">Shop now</button>
         </div>
     </header>
-<!-- en of hero -->
-<section class="products">
-    <div class="seccion-title">
-        <h2>our products</h2>
-    </div>
-    <div class="products-center">
-        <!--Single product-->
-        <article class="product">
-            <div class="img-container">
-                <img src="./images/product-1.jpeg" alt="product" class="product-img">
+    <!-- en of hero -->
+    <section class="products">
+        <div class="seccion-title">
+            <h2>our products</h2>
+        </div>
+        <div class="products-center">
+            <!--Single product-->
+            <article class="product">
+                <div class="img-container">
+                    <img src="./images/product-1.jpeg" alt="product" class="product-img" />
 
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart"></i>add to bag
-                </button>
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart"></i>add to bag
+                    </button>
+                </div>
+                <h3>queen bed</h3>
+                <h4>1200$</h4>
+            </article>
+            <!--End of Single product-->
+
+            <!-- Cart -->
+            <div class="cart-overlay">
+                <div class="cart">
+                    <span class="close-cart">
+                        <i class="fas fa-window-close"></i>
+                    </span>
+                    <h2>your cart</h2>
+                    <div class="cart-content">
+                        <!--Cart item-->
+                        <div class="cart-item">
+                            <img src="./images/product-1.jpeg" alt="product">
+                        </div>
+                        <!--end Cart Item-->
+                    </div>
+                </div>
             </div>
-            <h3>queen bed</h3>
-            <h4>1200$</h4>
-        </article>
-        <!--End of Single product-->
-        <!--Single product-->
-        <article class="product">
-            <div class="img-container">
-                <img src="./images/product-1.jpeg" alt="product" class="product-img">
-                
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart"></i>add to bag
-                </button>
-            </div>
-            <h3>queen bed</h3>
-            <h4>1200$</h4>
-        </article>
-        <!--End of Single product-->
-        <!--Single product-->
-        <article class="product">
-            <div class="img-container">
-                <img src="./images/product-1.jpeg" alt="product" class="product-img">
-                
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart"></i>add to bag
-                </button>
-            </div>
-            <h3>queen bed</h3>
-            <h4>1200$</h4>
-        </article>
-        <!--End of Single product-->
-        <!--Single product-->
-        <article class="product">
-            <div class="img-container">
-                <img src="./images/product-1.jpeg" alt="product" class="product-img">
-                
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart"></i>add to bag
-                </button>
-            </div>
-            <h3>queen bed</h3>
-            <h4>1200$</h4>
-        </article>
-        <!--End of Single product-->
-    </div>
-</section>
-<!-- Products -->
+            <!-- End of Cart -->
+        </div>
+    </section>
+    <!-- Products -->
 
-<!-- End of Products -->
-
-
-
-
+    <!-- End of Products -->
 
     <script src="./shopping-cart.js"></script>
 </body>
+
 </html>

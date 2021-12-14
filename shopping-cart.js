@@ -15,6 +15,40 @@ const productsDOM = document.querySelector('.products-center');
 //Carrito
 let cart = [];
 
+//Tomar los productos
+class Products{
+    async getProducts(){
+        try{
+            let result = await fetch('products.json');
+            let data = await result.json();
+            return data;
+            return result;
+        }catch(error){
+            console.log(error);
+        }
+    }
+}
+
+//Display prod
+class UI{
+
+}
+
+//Local Storage
+class Storage{
+
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+    const ui = new UI();
+    const products = new Products();
+
+    //tomar todos los productos
+    products.getProducts().then(data => console.log(data));
+
+});
+
+
 
 
 

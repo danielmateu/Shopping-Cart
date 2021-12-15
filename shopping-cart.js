@@ -2,6 +2,7 @@
 
 //Darle una vuelta
 
+/*
 //const contentful = require('contentful');
 const client = contentful.createClient({
     // This is the space ID. A space is like a project folder in Contentful terms
@@ -10,6 +11,8 @@ const client = contentful.createClient({
     accessToken: "mgyVfeTIJ1nJIYiPm9opFAL9lypDwRSroGd2d6rAuIE"
   });
   console.log(client);
+
+*/
 
 //Declarar Variables - seleccionando elementos del DOM
 
@@ -205,7 +208,7 @@ class UI {
                 let lowerAmount = event.target;
                 let id=lowerAmount.dataset.id;
                 let tempItem = cart.find(item =>item.id ===id);
-                tempItem.amount = tempItem.amount - 1;
+                tempItem.amount -= tempItem.amount ;
                 if(tempItem.amount > 0){
                     Storage.saveCart(cart);
                     this.setCartValues(cart);

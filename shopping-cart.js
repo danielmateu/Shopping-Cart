@@ -1,5 +1,16 @@
 "use strict";
 
+//Darle una vuelta
+
+//const contentful = require('contentful');
+const client = contentful.createClient({
+    // This is the space ID. A space is like a project folder in Contentful terms
+    space: "ijpoc4c9z0nq",
+    // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+    accessToken: "mgyVfeTIJ1nJIYiPm9opFAL9lypDwRSroGd2d6rAuIE"
+  });
+  console.log(client);
+
 //Declarar Variables - seleccionando elementos del DOM
 
 const cartBtn = document.querySelector(".cart-btn");
@@ -23,6 +34,7 @@ let buttonsDOM = [];
 class Products {
     async getProducts() {
         try {
+            
             let result = await fetch("products.json");
             let data = await result.json();
 
@@ -271,4 +283,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//https://www.youtube.com/watch?v=90PgFUPIybY&t=16s min 2:36:46
+//https://www.youtube.com/watch?v=90PgFUPIybY&t=16s min 3:59:46 - Conectando a la API...

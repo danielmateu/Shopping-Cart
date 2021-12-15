@@ -105,7 +105,7 @@ class UI {
                     //display cart item
                     this.addCartItem(cartItem)
                     //Show the cart
-
+                    this.showCart()
 
                     
                 });
@@ -136,13 +136,32 @@ class UI {
         </div>
         <div>
             <i class="fas fa-chevron-up" data-id=${item.id}></i>
-            <p class="item-amount">data-id=${item.amount}</p>
+            <p class="item-amount" data-id=${item.id}>${item.amount}</p>
             <i class="fas fa-chevron-down" data-id=${item.id}></i>
         </div>`;
         cartContent.appendChild(div);
-        console.log(cartContent);
+       // console.log(cartContent);
+
     }
-    
+    showCart(){
+        cartOverlay.classList.add('transparentBcg');
+        cartDOM.classList.add('showCart');
+    }
+    setupApp(){
+        cart = Storage.getCart();
+        this.setCartValues(cart);
+        this.populateCart(cart);
+        cartBtn.addEventListener('click',this.showCart)
+    };
+    populateCart(cart){
+        cart.forEach(item => this.addCartItem(item))
+        closeCartBtn.addEventListener('click',this.hideCart)
+
+    }
+    hideCart(){
+        cartOverlay.classList.remove('transparentBcg');
+        cartDOM.classList.remove('showCart');
+    }
 }
 
 //Local Storage
@@ -157,11 +176,17 @@ class Storage {
     static saveCart(cart){
         localStorage.setItem('cart',JSON.stringify(cart));
     }
+    static getCart(){
+        return localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[];
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI();
     const products = new Products();
+    //Setup app
+
+    ui.setupApp()
 
     //tomar todos los productos
     products
@@ -174,5 +199,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ui.getBagButtons();
         });
 });
+
+
+
+
 
 //https://www.youtube.com/watch?v=90PgFUPIybY&t=16s min 2:36:46
